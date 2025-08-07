@@ -33,6 +33,16 @@ app.get("/results", (req, res) => {
   res.json(submissions);
 });
 
+
+// ...existing code...
+
+app.post("/clear", (req, res) => {
+  writeSubmissions([]);
+  res.json({ success: true });
+});
+
+// ...existing code...
+
 app.listen(PORT, () => {
   console.log(`API running on http://localhost:${PORT}`);
 });
